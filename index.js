@@ -92,14 +92,17 @@ function pintarArray(arr) {
   }
 
   
+//- [ ] 13.- Crear la función **arrayMapi** que acepte como argumento **un Array y una función** y devuelva **
+//un array en el que se haya aplicado la función a cada elemento del array**
+
+function arrayMapi (arr,a){
+    return arr.map((element, index) => a(element, index));
+  }
+
+
+
+
 /*
-
-
-### Mezclando arrays y funciones ###
-
-
-
-- [ ] 13.- Crear la función **arrayMapi** que acepte como argumento **un Array y una función** y devuelva **un array en el que se haya aplicado la función a cada elemento del array**
 
 - [ ] 14.- Crear la función **eliminarDuplicados** que acepte como argumento **un array** y devuelva **un array en el que se hayan eliminado los duplicados**
 
