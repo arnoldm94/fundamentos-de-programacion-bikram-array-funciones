@@ -74,20 +74,17 @@ function obtenerPares(arraynumero) {
 
 //- [ ] 12.- Crear la función **pintarArray** que acepte como argumento **un array** y devuelva **una cadena de texto Array entrada: [0, 1, 2] String salida: '[0, 1, 2]'**
 function pintarArray(arr) {
-    let cadena = '['; // Iniciamos la cadena con el corchete de apertura
+    let cadena = '['; 
    
     for (let i = 0; i < arr.length; i++) {
-      // Agregamos cada elemento del array a la cadena
       cadena += arr[i];
      
-      // Agregamos una coma y un espacio si no es el último elemento
       if (i !== arr.length - 1) {
         cadena += ', ';
       }
     }
    
-    cadena += ']'; // Agregamos el corchete de cierre al final
-   
+    cadena += ']';   
     return cadena;
   }
 
