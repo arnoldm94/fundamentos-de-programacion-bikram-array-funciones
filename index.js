@@ -96,42 +96,102 @@ function arrayMapi (arr,a){
     return arr.map((element, index) => a(element, index));
   }
 
+//- [ ] 14.- Crear la función **eliminarDuplicados** que acepte como argumento **un array**
+ //y devuelva **un array en el que se hayan eliminado los duplicados**
+ function eliminarDuplicados(array) {
+ 
+  let arraySinDuplicados = [];
+
+  array.forEach(function(elemento) {
+
+      if (!arraySinDuplicados.includes(elemento)) {
+          arraySinDuplicados.push(elemento);
+      }
+  });
+
+  return arraySinDuplicados;
+}
+
+//- [ ] 15.- Crear variable de nombre **arrayNumerosNeg** declarada con 
+//un **array de números del 0 al -9 (0, -1, -2...)**
+var arrayNumerosNeg = [0, -1, -2, -3, -4, -5, -6, -7, -8, -9];
+
+//- [ ] 16.- Crear variable de nombre **holaMundo** declarada con valor 
+//**array con las palabras 'Hola' y 'Mundo'**
+let holaMundo = ["Hola","Mundo"];
+
+//- [ ] 17.- Crear variable de nombre **loGuardoTodo** declarada con valor
+//**array con valores 'hola', 'que', 23, 42.33 y 'tal'**
+
+let loGuardoTodo = ["hola","que", 23, 42.33, "tal"];
 
 
+//- [ ] 18.- Crear variable de nombre **arrayDeArrays** declarada con
+ //valor **array: [[756, 'nombre'], [225, 'apellido'], [298, 'direccion']]**
+let arrayDeArrays = [[756, 'nombre'], [225, 'apellido'], [298, 'direccion']];
 
-/*
 
-- [ ] 14.- Crear la función **eliminarDuplicados** que acepte como argumento **un array** y devuelva **un array en el que se hayan eliminado los duplicados**
+// 19.- Crea la función **multiplicacion** que acepte como argumento  
+//**dos números** y devuelva **el resultado de su multiplicación**
+function multiplicacion (n1,n2){
+  return n1*n2
+}
 
-## Iteraciones :european_castle: proyecto :european_castle: ##
 
-### Arrays ###
+//- [ ] 20.- Crea la función **division** que acepte como argumento **dos números** y devuelva **el resultado de su division**
+ function division (n1,n2){
+return n1/n2
+ }
 
-- [ ] 15.- Crear variable de nombre **arrayNumerosNeg** declarada con un **array de números del 0 al -9 (0, -1, -2...)**
+//- [ ] 21.- Crea la función **esPar** que acepte como argumento **un número** y devuelva **true si es par y false si es impar**
+function esPar(n) {
+  if (n%2 ===0) {
+    return true
+      } else {
+       return false
+      }
+}
 
-- [ ] 16.- Crear variable de nombre **holaMundo** declarada con valor **array con las palabras 'Hola' y 'Mundo'**
 
-- [ ] 17.- Crear variable de nombre **loGuardoTodo** declarada con valor **array con valores 'hola', 'que', 23, 42.33 y 'tal'**
+//- [ ] 22.- Crea el array **arrayFunciones** que tenga como valor **las funciones:
+// suma, resta y multiplicación (todas aceptan 2 números como argumento y devuelve el resultado de su operación)**
 
-- [ ] 18.- Crear variable de nombre **arrayDeArrays** declarada con valor **array: [[756, 'nombre'], [225, 'apellido'], [298, 'direccion']]**
+let arrayFunciones =[suma,function resta(n1,n2){return n1-n2}, multiplicacion];
 
-### Funciones ###
+ //23.-  Crear la función **ordenarArray2** que acepta como argumento
+ // **un array de números** y devuelva un **array ordenado de mayor a menor**
 
-- [ ] 19.- Crea la función **multiplicacion** que acepte como argumento **dos números** y devuelva **el resultado de su multiplicación**
+function ordenarArray2(arr) {
+    arr.sort(function(a, b) {
+        return b - a;
+    });
+    return arr;
+}
 
-- [ ] 20.- Crea la función **division** que acepte como argumento **dos números** y devuelva **el resultado de su division**
+//- [ ] 24.- Crear la función **obtenerImpares** que acepta como argumento **
+//un array de números** y devuelva un **array con los elementos impares**
+function obtenerImpares(ar) {
+   let impares = ar.filter(function(elemento) {
+      return elemento % 2 !== 0;
+  });
+  return impares;
+}
 
-- [ ] 21.- Crea la función **esPar** que acepte como argumento **un número** y devuelva **true si es par y false si es impar**
+//- [ ] 25.- Crear la función **sumarArray** que acepte como argumento
+// **un array numérico** y devuelva **la suma de los números en el array Array: [1, 2, 3] resultado: 6**
+function sumarArray(array) {
+  let suma = array.reduce(function(acumulador, elemento) {
+      return acumulador + elemento;
+  }, 0);
 
-- [ ] 22.- Crea el array **arrayFunciones** que tenga como valor **las funciones: suma, resta y multiplicación (todas aceptan 2 números como argumento y devuelve el resultado de su operación)**
+  return suma;
+}
 
-### Mezclando arrays y funciones ###
-
-- [ ] 23.-  Crear la función **ordenarArray2** que acepta como argumento **un array de números** y devuelva un **array ordenado de mayor a menor**
-
-- [ ] 24.- Crear la función **obtenerImpares** que acepta como argumento **un array de números** y devuelva un **array con los elementos impares**
-
-- [ ] 25.- Crear la función **sumarArray** que acepte como argumento **un array numérico** y devuelva **la suma de los números en el array Array: [1, 2, 3] resultado: 6**
-
-- [ ] 26.- Crear la función **multiplicarArray** que acepte como argumento **un array numérico** y devuelva **la multiplicación de los números en el array Array:  [2, 3, 4] resultado: 24**
- */
+//- [ ] 26.- Crear la función **multiplicarArray** que acepte como argumento
+// **un array numérico** y devuelva **la multiplicación de los números en el array Array:  [2, 3, 4] resultado: 24**
+function multiplicarArray(array) {
+  let multiplicacion = array.reduce(function(acumulador, elemento) {
+      return acumulador * elemento;
+  }, 1); 
+  return multiplicacion;
+}
